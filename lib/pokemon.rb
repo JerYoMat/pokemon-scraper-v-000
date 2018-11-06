@@ -16,7 +16,6 @@ class Pokemon
   end 
 
   def self.find(id, database_connection)
-     binding.pry 
      database_connection.execute("SELECT name from pokemon  Where id=1")
   end 
 
