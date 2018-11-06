@@ -17,8 +17,9 @@ class Pokemon
 
   def self.find(id, database_connection)
 
-     t = database_connection.execute("SELECT name from pokemon  Where id=1")
-     t[0].to_s 
+     poke = database_connection.execute("SELECT id, name, type from pokemon  Where id=#{id}")
+     binding.pry 
+    
   end 
 
 end
