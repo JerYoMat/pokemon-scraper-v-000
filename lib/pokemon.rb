@@ -18,8 +18,8 @@ class Pokemon
   def self.find(id, database_connection)
 
      poke = database_connection.execute("SELECT id, name, type from pokemon  Where id=#{id}")
-     #binding.pry 
-     Pokemon.new(poke[1], poke[2], poke[3], database_connection )
+     
+    
   end 
 
 end
